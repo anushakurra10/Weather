@@ -1,0 +1,50 @@
+* {
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.table {
+    width: 90%;
+    margin: 20px 0px 20px 20px;
+
+    .badge {
+        display: inline-block;
+        min-width: 10px;
+        padding: 3px 7px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1;
+        vertical-align: baseline;
+        white-space: nowrap;
+        text-align: center;
+        background-color: #4e4d4a;
+        border-radius: 10px;
+    }
+    .content {
+        display: flex;
+
+        .left {
+            padding-right: 12px;
+            border-right: 2px solid #d8d7d7;
+            width: 16%;
+        }
+        .right {
+            width: 14%;
+            padding-left: 12px;
+        }
+        .sun-icon {
+            float: right;
+        }
+        .time {
+            line-height: 2.5;
+        }
+    }
+
+    > tbody > tr > td {
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-bottom: 1px solid #ddd;
+        padding: 16px 0px 16px 0px;
+    }
+}

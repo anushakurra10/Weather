@@ -1,0 +1,22 @@
+<div><a [routerLink]="['/home']"><img src="assets/back-arrow.png" width="40" height="40"></a></div>
+
+<ng-container *ngIf="forecastdata">
+    <div class="heading">
+        <strong>5 - day weather forecast</strong> - {{forecastdata.city.name}}, {{forecastdata.city.country}}
+        <img src="http://openweathermap.org/images/flags/{{forecastdata.city.country | lowercase}}.png">
+        <div class="forecast">As of 09:00 </div>
+    </div>
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let item of forecastdata.list;trackBy: trackByFn">
+                <td>{{item.dt*1000 | date:'EEE, MMM d'}}</td>
+                <td class="badge badge-info">{{item.main.temp - 273.15 | number :'1.1-1'}}°С </td>
+                <td><img class="weather-icon" src="http://openweathermap.org/img/wn/{{item.weather[0].icon}}@2x.png"
+                        width=80 height=80></td>
+                <td class="sub">{{item.weather[0].description}}</td>
+                <td><img src="assets/flood.png" width="20" height="20">
+                    {{item.main.sea_level}} hpa</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>

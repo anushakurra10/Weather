@@ -1,0 +1,31 @@
+.bn-header--weather {
+    background: #007b7a;
+    color: #fff;
+
+    .headline-banner__wrap {
+        flex: 1 1 100%;
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    img{
+        margin-top: 14px;
+        margin-right: 16px;
+    }
+
+    .headline-banner__content {
+        flex: 1 1 100%;
+    }
+
+    .headline-banner__title {
+        color: inherit;
+        line-height: 1;
+        font-weight: 700;
+        font-size: 24px;
+    }
+    
+}
+
+
+
